@@ -86,9 +86,9 @@ namespace ProjetoPong {
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 24);
+            this.label1.Size = new System.Drawing.Size(147, 24);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Player 1 - Points:";
+            this.label1.Text = "Player 1 | Points:";
             // 
             // label2
             // 
@@ -97,9 +97,9 @@ namespace ProjetoPong {
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(786, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 24);
+            this.label2.Size = new System.Drawing.Size(147, 24);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Player 2 - Points:";
+            this.label2.Text = "Player 2 | Points:";
             // 
             // lblPlayerPoints
             // 
@@ -133,6 +133,8 @@ namespace ProjetoPong {
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 7;
+            this.btnStart.TabStop = false;
+            this.btnStart.Tag = "start";
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
@@ -147,6 +149,7 @@ namespace ProjetoPong {
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 8;
+            this.btnReset.TabStop = false;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -161,6 +164,7 @@ namespace ProjetoPong {
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.Size = new System.Drawing.Size(75, 23);
             this.btnEnd.TabIndex = 9;
+            this.btnEnd.TabStop = false;
             this.btnEnd.Text = "End";
             this.btnEnd.UseVisualStyleBackColor = false;
             // 
@@ -234,6 +238,8 @@ namespace ProjetoPong {
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pong";
             this.Load += new System.EventHandler(this.Main_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Main_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Pplayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Penemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pball)).EndInit();
