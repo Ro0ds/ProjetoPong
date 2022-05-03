@@ -72,7 +72,7 @@ namespace ProjetoPong {
             // Pball
             // 
             this.Pball.BackColor = System.Drawing.Color.Aqua;
-            this.Pball.Location = new System.Drawing.Point(482, 262);
+            this.Pball.Location = new System.Drawing.Point(482, 260);
             this.Pball.Name = "Pball";
             this.Pball.Size = new System.Drawing.Size(13, 14);
             this.Pball.TabIndex = 2;
@@ -167,6 +167,7 @@ namespace ProjetoPong {
             this.btnEnd.TabStop = false;
             this.btnEnd.Text = "End";
             this.btnEnd.UseVisualStyleBackColor = false;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // pictureBox4
             // 
